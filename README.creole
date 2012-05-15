@@ -1,0 +1,22 @@
+== MoreCharacters
+
+MoreCharacters lets you chat with more characters!
+
+=== Usage
+
+To use, simply put any of the following in your chat and it will automatically be replaced
+|=Chat code|=Replacement|
+|:{{{smile}}}:|☺|
+|:{{{smile2}}}:|☻|
+|:{{{spade}}}:|♠|
+|:{{{club}}}:|♣|
+|:{{{heart}}}:|♥|
+|:{{{diamond}}}:|♦|
+|:{{{male}}}:|♀|
+|:{{{female}}}:|♂|
+|:{{{note}}}:|♪|
+|:{{{note2}}}:|♫|
+
+=== Compiling
+
+Maven 3 is required to compile PostOffice

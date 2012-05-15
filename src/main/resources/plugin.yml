@@ -1,0 +1,5 @@
+name: ${project.name}
+main: com.nuclearw.morecharacters.MoreCharacters
+version: ${project.version}
+author: NuclearW
+description: MoreCharacters lets you chat with more characters!
