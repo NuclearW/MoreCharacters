@@ -19,4 +19,4 @@ To use, simply put any of the following in your chat and it will automatically b
 
 === Compiling
 
-Maven 3 is required to compile PostOffice
+Maven 3 is required to compile MoreCharacters
