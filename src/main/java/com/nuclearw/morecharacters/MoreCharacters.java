@@ -3,25 +3,25 @@ package com.nuclearw.morecharacters;
 import java.lang.reflect.Field;
 import java.lang.reflect.Modifier;
 
-import net.minecraft.server.SharedConstants;
+import net.minecraft.server.v1_4_6.SharedConstants;
 
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
-import org.bukkit.event.player.PlayerChatEvent;
+import org.bukkit.event.player.AsyncPlayerChatEvent;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public class MoreCharacters extends JavaPlugin implements Listener {
 	private static final String[][] convertTable = {
-		{":smile:" , "\u263A"},		// ☺
-		{":smile2:" , "\u263B"},	// ☻
-		{":spade:" , "\u2660"},		// ♠
-		{":club:" , "\u2663"},		// ♣
-		{":heart:" , "\u2665"},		// ♥
-		{":diamond:" , "\u2666"},	// ♦
-		{":male:" , "\u2642"},		// ♀
-		{":female:" , "\u2640"},	// ♂
-		{":note:" , "\u266A"},		// ♪
-		{":note2:" , "\u266B"},		// ♫
+		{":smile:" , "\u263A"},     // ☺
+		{":smile2:" , "\u263B"},    // ☻
+		{":spade:" , "\u2660"},     // ♠
+		{":club:" , "\u2663"},      // ♣
+		{":heart:" , "\u2665"},     // ♥
+		{":diamond:" , "\u2666"},   // ♦
+		{":male:" , "\u2642"},      // ♀
+		{":female:" , "\u2640"},    // ♂
+		{":note:" , "\u266A"},      // ♪
+		{":note2:" , "\u266B"},     // ♫
 	};
 
 	@Override
@@ -49,7 +49,7 @@ public class MoreCharacters extends JavaPlugin implements Listener {
 	}
 
 	@EventHandler
-	public void onPlayerChat(PlayerChatEvent event) {
+	public void onPlayerChat(AsyncPlayerChatEvent event) {
 		String chat = event.getMessage();
 		for(String[] pair : convertTable) {
 			chat = chat.replaceAll(pair[0], pair[1]);
@@ -67,16 +67,16 @@ public class MoreCharacters extends JavaPlugin implements Listener {
 		String oldallowedchars = (String) field.get(null);
 
 		/*
-		 * :smile:		☺		\u263A
-		 * :smile2:		☻		\u263B
-		 * :spade:		♠		\u2660
-		 * :club:		♣		\u2663
-		 * :heart:		♥		\u2665
-		 * :diamond:	♦		\u2666
-		 * :male:		♀		\u2642
-		 * :female:		♂		\u2640
-		 * :note:		♪		\u266A
-		 * :note2:		♫		\u266B
+		 * :smile:      ☺       \u263A
+		 * :smile2:     ☻       \u263B
+		 * :spade:      ♠       \u2660
+		 * :club:       ♣       \u2663
+		 * :heart:      ♥       \u2665
+		 * :diamond:    ♦       \u2666
+		 * :male:       ♀       \u2642
+		 * :female:     ♂       \u2640
+		 * :note:       ♪       \u266A
+		 * :note2:      ♫       \u266B
 		 */
 		String add = "\u263A\u263B\u2660\u2663\u2665\u2666\u2642\u2640\u266A\u266B";
 		StringBuilder sb = new StringBuilder();
